@@ -1,0 +1,225 @@
+  .tabs {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .tabs h2 {
+    font-family: "Montserrat-Bold";
+    font-size: 36px;
+    line-height: 54px;
+    color: #262626;
+      }
+  .tabs__nav {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding-right: 16%;
+    padding-top: 70px;    
+  }
+  .tabs__nav::before {
+    position: absolute;
+    content: "";
+    bottom: -15px;    
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #E6E6E6;
+    opacity: 0.7;
+  }
+  .tabs__nav-btn {
+    font-family: "Montserrat-Regular";
+    font-size: 20px;
+    line-height: 24px;
+    border: none;  
+    background-color: transparent;
+    color: #000000;
+    position: relative;
+    transition: 0.3s;
+  }
+  .tabs__nav-btn::before {
+    position: absolute;
+    content: "";
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #80CA16;
+    transition: 0.3s;
+  }
+  .tabs__nav-btn:hover::before {
+    width: 101.5%;
+  }
+  .tabs__nav-btn:hover {
+    color: #80CA16;
+  }
+  .active {    
+  }
+
+/* СТИЛИ СЛАЙДЕРА */
+.slider-tab__container {
+    margin-top: 72px;
+    
+       
+}
+.slider-01 {
+    display: flex;
+    align-items: center;
+}
+.slider-02 {
+  display: flex;
+  align-items: center;
+}
+.slider-03 {
+  display: flex;
+  align-items: center;
+}
+.slider-tab__img06,
+.slider-tab__img05,
+.slider-tab__img04,
+.slider-tab__img03,
+.slider-tab__img02,
+.slider-tab__img {
+    height: 410px;
+    width: 52.5%;
+    background: url("../images/tabs-img/home.jpg") no-repeat;
+    background-position: right;
+    background-size: cover;  
+}
+.slider-tab__img02 {
+  background: url("../images/tabs-img/home-2.jpg") no-repeat;
+}
+.slider-tab__img03 {
+  background: url("../images/tabs-img/home-3.jpg") no-repeat;
+}
+.slider-tab__img04 {
+  background: url("../images/tabs-img/home-4.jpg") no-repeat;
+}
+.slider-tab__img05 {
+  background: url("../images/tabs-img/home-5.jpg") no-repeat;
+}
+.slider-tab__img06 {
+  background: url("../images/tabs-img/home-6.jpg") no-repeat;
+}
+
+.slider-tab__content {
+    height: 65.9%;
+    width: 47.5%;   
+    background: #262626;
+    position: relative; 
+}
+.slider-tab-block {
+    display: flex;
+    flex-direction: column;    
+    margin: 45px 20px 60px 60px;
+   
+}
+.slider-tab__title {
+    font-family: "Montserrat-Bold";
+    font-size: 26px;
+    line-height: 39px;
+    color: #FFFFFF;
+    padding: 0 0 15px 0;
+    
+}
+.slider-tab__text {
+    font-family: "Montserrat-Regular";
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    opacity: 0.7;    
+}
+.slider-tab__text a {
+   color: #80CA16;
+   text-decoration: underline;
+   transition: 0.3s;
+}
+.slider-tab__text a:hover {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+}
+.slider-consultation {
+  border: none;  
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 245px;
+  transform: translateX(-50%);  
+  font-family: "Montserrat-Bold";
+  font-size: 14px;
+  line-height: 21px;  
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #80CA16;
+  border-radius: 5px;
+  padding: 20px 55px;
+  transition: 0.3s;
+  z-index: 100;
+}
+.slider-consultation:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px #80CA16;     
+}
+
+.slider-arows__right-tab,
+.slider-arows__left-tab {
+  background-size: contain;
+  width: 36px;
+  height: 10px; 
+  z-index: 50;
+  transition: 0.3s; 
+}
+
+.slider-arows__right-tab {
+  background: url("icons/arrow-next.svg") no-repeat;
+  top: 0;
+  right: 0;
+}
+
+.slider-arows__left-tab {
+  background: url("icons/arrow-prev.svg") no-repeat;
+  top: 0;
+  right: 56px;
+}
+
+.slider-arows__right-tab:hover,
+.slider-arows__left-tab:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+.slider {
+  position: relative;
+}
+.slider .slick-arrow {
+  position: absolute;
+  top: -53px;
+  z-index: 50;
+}
+
+
+/* СТИЛИ ТАБОВ */
+.tabs__nav-btn.active::before {
+  position: absolute;
+  content: "";
+  bottom: -15px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #80CA16;
+  transition: 0.3s;
+}
+/* .tabs__nav-btn:hover::before {
+  width: 101.5%;
+}
+.tabs__nav-btn:hover {
+  color: #80CA16;
+} */
+
+.tabs__item {
+  display: none;
+}
+
+.tabs__item.active {
+  display: block;
+}
